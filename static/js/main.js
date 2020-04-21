@@ -6,6 +6,4 @@ $("[name='copyLink']").click(function(sender){
 function copyToClipBoard(str) {
     document.copyToClipBoard = str;
     $('#emailModal').modal('hide');
-    $('#weChatModal').modal('hide');
-    $('#qqModal').modal('hide');
 }

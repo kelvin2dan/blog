@@ -1,0 +1,30 @@
+{{ define "main" }}
+    <div class="main container">
+        {{ range .Pages.ByPublishDate }}
+            <div class="row justify-content-center">
+                <div class="col-md-2">
+                    <div class="card" style="height: 97%;">
+                        <div class="card-body flex-center">
+                            <p style="font-size: 22px;">{{ .PublishDate.Format "2nd" }}</p>
+                            <p style="font-size: 14px;">{{ .PublishDate.Format "Jan 2006" }}</p>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="{{ .Permalink }}">
+                                <h2>{{ replace .Title "-" " " }}</h2>                        
+                            </a>
+                            <span class="font-weight-lighter">{{ .Type }}</span>
+                            <p>{{ .Summary }}</p>
+                            {{ range .Keywords }}
+                                <span class="badge badge-pill badge-primary">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        {{ end }}
+    </div>
+{{ end }}
