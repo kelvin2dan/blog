@@ -8,13 +8,18 @@
             <p>
                 {{ .Content }}
             </p>
-            <div>
-                {{ with .Prev }}
-                    <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-                {{ end }}
-                {{ with .Next }}
-                    <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-                {{ end }}
+            <hr/>
+            <div class="row">
+                <div class="col-md-6 flex-center">
+                    {{ with .Next }}
+                        <a class="previous" href="{{.Permalink}}">Previous: {{.Title}}</a>
+                    {{ end }}
+                </div>
+                <div class="col-md-6 flex-center">
+                    {{ with .Prev }}
+                        <a class="next" href="{{.Permalink}}">Next: {{.Title}}</a>
+                    {{ end }}
+                </div>
             </div>
         </article>
     </div>
