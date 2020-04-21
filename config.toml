@@ -1,3 +1,28 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://kelvin2dan.github.io"
+languageCode = "zh-cn"
+title = "Kelvin's Blog"
+
+sectionPagesMenu = "main"
+
+# main menu
+[menu]
+    [[menu.main]]
+        identifier = "HomePage"
+        name = "Home"
+        url = "/"
+        weight = 1
+    [[menu.main]]
+        identifier = "PostPage"
+        name = "Post"
+        url = "/post"
+        weight = 2
+    [[menu.main]]
+        identifier = "ArticlePage"
+        name = "Article"
+        url = "/article"
+        weight = 3
+    [[menu.main]]
+        identifier = "AboutPage"
+        name = "About"
+        url = "/about"
+        weight = 4
